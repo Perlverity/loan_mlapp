@@ -1,0 +1,24 @@
+{% extends 'mlapp/base.html' %}
+
+{% block title %}審査結果{% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 20px;">
+    <h2 style="font-size: 30px;">
+        {% if y == 0 %}審査に落ちました。
+        {% else %}審査通過です。
+        {% endif %}
+    </h2>
+    <p>信頼度は{{ y_proba }}%です。</p>
+    <h2 style="font-size: 25px;">
+        {% if y == 0 %}この方への貸し出しは要検討です。
+        {% else %}
+        {% endif %}
+    </h2>
+    <a href="/history">
+        <button class="btn btn-primary" type="button" name="history">顧客リスト一覧</button>
+    </a>
+</div>
+
+{% endblock %}
