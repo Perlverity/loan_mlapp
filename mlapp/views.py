@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 
 
 # モデルの読み込み
-LOADED_MODEL = joblib.load('mlapp/ml_model.pkl')
+LOADED_MODEL = joblib.load('/home/Perlverity/perlverity.pythonanywhere.com/templates/mlapp/ml_model.pkl')
 
 
 @login_required
